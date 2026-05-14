@@ -728,7 +728,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/1/members/anamihaelabalasiu/boards?key={{trelloKey}}&token={{trelloToken}}",
+              "raw": "{{baseUrl}}/1/members/{{username}}/boards?key={{trelloKey}}&token={{trelloToken}}",
               "host": [
                 "{{baseUrl}}"
               ],
