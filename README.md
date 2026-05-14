@@ -28,7 +28,13 @@ This project contains a Postman collection that tests the Trello REST API, cover
 - [Postman](https://www.postman.com/)
 - [Trello REST API](https://developer.atlassian.com/cloud/trello/rest/)
 - [Newman](https://github.com/postmanlabs/newman)
-
+- 
+  ### With Postman CLI
+1. Install Postman CLI
+2. Login: `postman login --with-api-key YOUR_POSTMAN_API_KEY`
+3. Run: `postman collection run COLLECTION_ID`
+- [Postman CLI](https://learning.postman.com/docs/postman-cli/postman-cli-overview/)
+  
 ## 🚀 How to Run
 
 ### In Postman
