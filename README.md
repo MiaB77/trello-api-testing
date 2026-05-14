@@ -32,7 +32,7 @@ This project contains a Postman collection that tests the Trello REST API, cover
 ## 🚀 How to Run
 
 ### In Postman
-1. Import `Trello_API_Collection.json`
+1. Import `Trello API.postman_collection.json`
 2. Add your `trelloKey` and `trelloToken` as collection variables
 3. Run the collection
 
