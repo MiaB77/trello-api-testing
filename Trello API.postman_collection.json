@@ -55,15 +55,15 @@
               "listen": "prerequest",
               "script": {
                 "exec": [
-                  "// 1. Citește variabila din colecție și stocheaz-o într-o variabilă JS\r",
+                  "// 1. Is readind the variable from the collection and store it JS\r",
                   "let boardNumber = pm.collectionVariables.get(\"boardNumber\");\r",
                   "if (isNaN(boardNumber)) {\r",
                   "    boardNumber = 0; // Dacă variabila nu există sau nu este un număr, o inițializează cu 1. isNaN = is not a number\r",
                   "}\r",
-                  "// 2. Incrementează variabila JS\r",
+                  "// 2. Increment the variable JS\r",
                   "boardNumber++;\r",
                   "\r",
-                  "// 3. Actualizează variabila din colecție cu noua valoare\r",
+                  "// 3. Update the variable in the collection with the new value\r",
                   "pm.collectionVariables.set(\"boardNumber\", boardNumber);\r",
                   "\r",
                   "\r",
