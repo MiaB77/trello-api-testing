@@ -38,10 +38,7 @@ This project contains a Postman collection that tests the Trello REST API, cover
 
 ### With Newman
 ```bash
-newman run Trello_API_Collection.json \
-  --env-var "trelloKey=YOUR_KEY" \
-  --env-var "trelloToken=YOUR_TOKEN"
-```
+newman run "Trello_API_Collection.json"
 
 ## 🔑 Authentication
 
