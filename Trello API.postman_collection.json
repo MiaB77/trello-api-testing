@@ -79,7 +79,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/1/boards/?key={{trelloKey }}&token={{trelloToken }}&name=Learning Postman {{boardNumber}}",
+              "raw": "{{baseUrl}}/1/boards/?key={{trelloKey}}&token={{trelloToken}}&name=Learning Postman {{boardNumber}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -91,11 +91,11 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 },
                 {
                   "key": "name",
@@ -118,7 +118,7 @@
                   "});\r",
                   "\r",
                   "const response = pm.response.json();\r",
-                  "console.log(response.id); // Access the 'id' field \r",
+                  "console.log(response.id); \r",
                   "\r",
                   "pm.test(\"Board has required fields\", () => {\r",
                   "    pm.expect(response).to.have.property(\"id\");\r",
@@ -157,7 +157,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/1/boards/:id?key={{trelloKey }}&token={{trelloToken }}",
+              "raw": "{{baseUrl}}/1/boards/:id?key={{trelloKey}}&token={{trelloToken}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -169,11 +169,11 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 }
               ],
               "variable": [
@@ -193,7 +193,7 @@
               "listen": "test",
               "script": {
                 "exec": [
-                  "pm.test(\"Status code is 200\",  () => {\r",
+                  "pm.test(\"Status code is 200\", () => {\r",
                   "    pm.response.to.have.status(200);\r",
                   "});\r",
                   "\r",
@@ -211,17 +211,15 @@
                   "\r",
                   "const response = pm.response.json();\r",
                   "\r",
-                  "// Verificăm dacă avem board-uri în listă\r",
                   "if (response.length > 0) {\r",
-                  "    // Luăm ID-ul primului board și îl salvăm pentru cererea de Delete\r",
                   "    pm.collectionVariables.set(\"boardIdToDelete\", response[0].id);\r",
-                  "    \r",
-                  "    // Îi spunem lui Postman să meargă la cererea de ștergere\r",
+                  "\r",
+                  "\r",
                   "    pm.execution.setNextRequest(\"Delete Board\");\r",
-                  "    \r",
+                  "\r",
                   "    console.log(\"Mai avem \" + response.length + \" board-uri. Mergem la Delete.\");\r",
                   "} else {\r",
-                  "    // Dacă lista e goală (length este 0), oprim fluxul\r",
+                  "\r",
                   "    pm.execution.setNextRequest(null);\r",
                   "    console.log(\"Nu mai sunt board-uri de șters. Stop.\");\r",
                   "}\r",
@@ -249,7 +247,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/1/members/me/boards?key={{trelloKey }}&token={{trelloToken }}&=",
+              "raw": "{{baseUrl}}/1/members/me/boards?key={{trelloKey}}&token={{trelloToken}}&=",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -262,11 +260,11 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 },
                 {
                   "key": "",
@@ -315,7 +313,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/1/boards/:id?key={{trelloKey }}&token={{trelloToken }}",
+              "raw": "{{baseUrl}}/1/boards/:id?key={{trelloKey}}&token={{trelloToken}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -327,11 +325,11 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 }
               ],
               "variable": [
@@ -351,16 +349,7 @@
               "listen": "prerequest",
               "script": {
                 "exec": [
-                  "/*const existingBoardsID = pm.collectionVariables.get(\"existingBoardsID\");\r",
-                  "console.log(existingBoardsID)  // This will log the value of the variable to the console for debugging purposes.\r",
-                  "\r",
-                  "const boardId = existingBoardsID.pop();\r",
-                  "pm.collectionVariables.set(\"boardId\", boardId); \r",
-                  "pm.collectionVariables.set(\"existingBoardsID\", existingBoardsID);\r",
-                  "\r",
-                  " // Update the collection variable with the remaining board IDs. \r",
-                  "// it deletes all the boards except the last one.\r",
-                  "*/"
+                  ""
                 ],
                 "type": "text/javascript",
                 "packages": {},
@@ -399,7 +388,7 @@
               }
             },
             "url": {
-              "raw": "{{baseUrl}}/1/boards/:id?key={{trelloKey }}&token={{trelloToken }}",
+              "raw": "{{baseUrl}}/1/boards/:id?key={{trelloKey}}&token={{trelloToken}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -411,11 +400,11 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 }
               ],
               "variable": [
@@ -464,7 +453,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/1/lists?name=TODO&idBoard={{boardId}}&key={{trelloKey }}&token={{trelloToken }}",
+              "raw": "{{baseUrl}}/1/lists?name=TODO&idBoard={{boardId}}&key={{trelloKey}}&token={{trelloToken}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -483,11 +472,11 @@
                 },
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 }
               ]
             }
@@ -526,7 +515,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/1/lists?name=DONE&idBoard={{boardId}}&key={{trelloKey }}&token={{trelloToken }}",
+              "raw": "{{baseUrl}}/1/lists?name=DONE&idBoard={{boardId}}&key={{trelloKey}}&token={{trelloToken}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -545,11 +534,11 @@
                 },
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 }
               ]
             }
@@ -598,7 +587,7 @@
             "method": "POST",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/1/cards?key={{trelloKey }}&token={{trelloToken }}&idList={{todoListId}}&name=Sign-up for Trello",
+              "raw": "{{baseUrl}}/1/cards?key={{trelloKey}}&token={{trelloToken}}&idList={{todoListId}}&name=Sign-up for Trello",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -609,11 +598,11 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 },
                 {
                   "key": "idList",
@@ -657,7 +646,7 @@
             "method": "PUT",
             "header": [],
             "url": {
-              "raw": "{{baseUrl}}/1/cards/:id?key={{trelloKey }}&token={{trelloToken }}&idList={{doneListId}}&cardId={{cardId}}",
+              "raw": "{{baseUrl}}/1/cards/:id?key={{trelloKey}}&token={{trelloToken}}&idList={{doneListId}}&cardId={{cardId}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -669,11 +658,11 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 },
                 {
                   "key": "idList",
@@ -739,7 +728,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/1/members/anamihaelabalasiu/boards?key={{trelloKey }}&token={{trelloToken }}",
+              "raw": "{{baseUrl}}/1/members/anamihaelabalasiu/boards?key={{trelloKey}}&token={{trelloToken}}",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -752,11 +741,11 @@
               "query": [
                 {
                   "key": "key",
-                  "value": "{{trelloKey }}"
+                  "value": "{{trelloKey}}"
                 },
                 {
                   "key": "token",
-                  "value": "{{trelloToken }}"
+                  "value": "{{trelloToken}}"
                 }
               ]
             }
@@ -796,36 +785,36 @@
       "value": "https://api.trello.com"
     },
     {
-      "key": "trelloKey ",
+      "key": "trelloKey",
       "value": ""
     },
     {
-      "key": "trelloToken ",
+      "key": "trelloToken",
       "value": ""
     },
     {
       "key": "boardId",
-      "value": "6a031c692036ea0f2957e9a9"
+      "value": "6a05c4eec2a6e4d8e99a89ca"
     },
     {
       "key": "todoListId",
-      "value": "6a031ccd2eb075abe8eca246"
+      "value": "6a05c50a82fa21e9e506e862"
     },
     {
       "key": "doneListId",
-      "value": "6a031cd45deb4f3ba5c80456"
+      "value": "6a05c5169816df24ae6feca3"
     },
     {
       "key": "cardId",
-      "value": "6a031cda54ce7defac79de1a"
+      "value": "6a05c519f809cc540d8ea064"
     },
     {
       "key": "boardNumber",
-      "value": 34
+      "value": 39
     },
     {
       "key": "boardIdToDelete",
-      "value": "69f20e3ba15dc286f9088010"
+      "value": "6a05c31f920a16372d38bd15"
     }
   ]
 }
