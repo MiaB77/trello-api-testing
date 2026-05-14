@@ -58,7 +58,7 @@
                   "// 1. Is readind the variable from the collection and store it JS\r",
                   "let boardNumber = pm.collectionVariables.get(\"boardNumber\");\r",
                   "if (isNaN(boardNumber)) {\r",
-                  "    boardNumber = 0; // Dacă variabila nu există sau nu este un număr, o inițializează cu 1. isNaN = is not a number\r",
+                  "    boardNumber = 0; // If the variable does not exist or is not a number, it is initialized to 1. isNaN = is not a number\r",
                   "}\r",
                   "// 2. Increment the variable JS\r",
                   "boardNumber++;\r",
@@ -221,10 +221,10 @@
                   "} else {\r",
                   "\r",
                   "    pm.execution.setNextRequest(null);\r",
-                  "    console.log(\"Nu mai sunt board-uri de șters. Stop.\");\r",
+                  "    console.log(\"There are no more boards to erase. Stop.\");\r",
                   "}\r",
                   "\r",
-                  "console.log(\"Număr total board-uri:\", pm.response.json().length);"
+                  "console.log(\"Total number of boards:\", pm.response.json().length);"
                 ],
                 "type": "text/javascript",
                 "packages": {},
