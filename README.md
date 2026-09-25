@@ -23,6 +23,14 @@ This project contains a Postman collection that tests the Trello REST API, cover
 - Card movement between lists
 - Member board access
 
+## 📊 Key Features
+
+- **Collection variables** — Dynamic data management across requests
+- **Pre-request scripts** — Automated variable setup
+- **Response assertions** — Status codes, body fields, board properties
+- **Full lifecycle coverage** — Create → Use → Delete workflow
+- **Newman CLI** — Automated runs without Postman UI
+
 ## 🛠️ Tools Used
 
 - [Postman](https://www.postman.com/)
@@ -33,16 +41,19 @@ This project contains a Postman collection that tests the Trello REST API, cover
 ## 🚀 How to Run
 
 ### In Postman
+
 1. Import `Trello API.postman_collection.json`
 2. Add your `trelloKey` and `trelloToken` as collection variables
 3. Run the collection
 
 ### With Newman
+
 ```bash
 newman run "Trello API.postman_collection.json"
 ```
 
 ### With Postman CLI
+
 1. Install Postman CLI
 2. Login: `postman login --with-api-key YOUR_POSTMAN_API_KEY`
 3. Run: `postman collection run COLLECTION_ID`
@@ -50,9 +61,16 @@ newman run "Trello API.postman_collection.json"
 ## 🔑 Authentication
 
 This project uses Trello API Key and Token. To get yours:
+
 1. Go to https://trello.com/power-ups/admin
 2. Generate your API Key and Token
 
+## ⚠️ Notes
+
+- Requires a valid Trello API Key and Token
+- Tests cover the complete board lifecycle in sequence
+- **Note:** Trello API availability may vary — some endpoints require an active Atlassian/Trello account with valid credentials
+
 ## 👤 Author
 
-MiaB77
+[MiaB77](https://github.com/MiaB77)
